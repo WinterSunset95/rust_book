@@ -5,6 +5,7 @@
 
 use std::io;
 use rand::Rng;
+use colored::*;
 
 fn main() {
 
@@ -22,11 +23,11 @@ fn main() {
         let guess: i32 = guess.trim().parse().expect("Please type a number!");
 
         if guess > number {
-            println!("Too High!");
+            println!("{}", "Too High!".red());
         } else if guess < number {
-            println!("Too Low!");
+            println!("{}", "Too Low!".red());
         } else {
-            println!("You Win!!!!");
+            println!("{}", "You Win!".green());
             break
         }
     }
